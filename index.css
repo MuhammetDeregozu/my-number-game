@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #80c1ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:1920px) and (min-width:1200px) {}
+
+.main-container {
+    padding: 5px;
+    margin: 5px;
+}
+
+.txtInput {
+    padding: 6px;
+    border-radius: 5px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.txtInput:focus {
+    outline: none;
+}
+
+.btnClick {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+.btnClick:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btnClick:focus {
+    outline: none;
+}
+
+.btnClick:active {
+    background-color: rgb(65, 65, 65);
+    border-color: rgb(65, 65, 65);
+}
+
+#errorMessage {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: rgb(245, 69, 69);
+    width: 200px;
+    height: 37px;
+    color: white;
+}
