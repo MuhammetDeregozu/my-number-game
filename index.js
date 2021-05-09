@@ -9,6 +9,7 @@ while (findValue.length < 4) {
     if (findValue.indexOf(randomNumber) === -1) findValue.push(randomNumber)
     if (findValue[0] == 0) findValue[0] = Math.ceil(Math.random() * 9)
 }
+console.log("test")
 
 var resultArray = []
 
