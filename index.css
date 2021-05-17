@@ -10,8 +10,6 @@ body {
     justify-content: center;
 }
 
-@media screen and (max-width:1920px) and (min-width:1200px) {}
-
 .main-container {
     padding: 5px;
     margin: 5px;
