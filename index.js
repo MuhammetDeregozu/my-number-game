@@ -21,10 +21,7 @@ function CheckNumberControl() {
 
     let usrInputArray = usrInput.value.toString().split('').map(Number)
 
-    if (new Set(usrInputArray).size !== usrInputArray.length) {
-        ShowErrorMessage("Girilen Sayının Rakamları Farklı Olmalıdır !")
-        usrInput.value = null;
-    } else CheckNumber()
+    new Set(usrInputArray).size !== usrInputArray.length ? ShowErrorMessage("Girilen Sayının Rakamları Farklı Olmalıdır !") : CheckNumber()
 }
 
 function CheckNumber() {
