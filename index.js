@@ -3,14 +3,14 @@ var checkList = document.getElementById("CheckList")
 var btnClick = document.getElementById("btnFindClick")
 var errMessage = document.getElementById("errorMessage")
 
+var resultArray = []
 var findValue = []
+
 while (findValue.length < 4) {
     var randomNumber = Math.floor(Math.random() * 10)
     if (findValue.indexOf(randomNumber) === -1) findValue.push(randomNumber)
     if (findValue[0] == 0) findValue[0] = Math.ceil(Math.random() * 9)
 }
-
-var resultArray = []
 
 function CheckNumberControl() {
 
@@ -19,7 +19,7 @@ function CheckNumberControl() {
         return;
     }
 
-    let usrInputArray = usrInput.value.toString().split('').map(Number)
+    var usrInputArray = Array.from(usrInput.value, Number);
 
     new Set(usrInputArray).size !== usrInputArray.length ? ShowErrorMessage("Girilen Sayının Rakamları Farklı Olmalıdır !") : CheckNumber()
 }
@@ -58,12 +58,12 @@ function CheckNumber() {
 
 function ShowErrorMessage(errorString) {
 
-    errMessage.style.display = "flex";
     errMessage.textContent = errorString;
+    errMessage.style.display = "flex";
 
     setTimeout(() => {
         errMessage.style.display = "none";
-    }, 2000);
+    }, 3000);
 
     usrInput.value = null;
 }
