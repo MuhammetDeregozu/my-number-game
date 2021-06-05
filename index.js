@@ -19,14 +19,14 @@ function CheckNumberControl() {
         return;
     }
 
-    var usrInputArray = Array.from(usrInput.value, Number);
+    let usrInputArray = Array.from(usrInput.value, Number);
 
     new Set(usrInputArray).size !== usrInputArray.length ? ShowErrorMessage("Girilen Sayının Rakamları Farklı Olmalıdır !") : CheckNumber()
 }
 
 function CheckNumber() {
 
-    let usrInputArray = usrInput.value.toString().split('').map(Number)
+    let usrInputArray = Array.from(usrInput.value, Number)
 
     for (let i = 0; i <= 3; i++) {
 
